@@ -1,0 +1,25 @@
+.track_box {
+    column-count: 2;
+    border-style: solid;
+    margin-right: 10px;
+    margin-bottom: 10px;
+    background-color: rgb(131, 139, 116);
+    font-family: monospace;
+    font-size: 18px;
+    padding-top: 5px;
+    padding-bottom:5px;
+    padding-left:5px;
+    display:flex
+}
+
+.track_image {
+    height: 40px; 
+    width: 40px; 
+    margin-right: 10px;
+    border-style: dashed;
+}
+
+.track_info {
+    display: flex; 
+    flex-direction: column;
+}

@@ -1,0 +1,40 @@
+.playlist_box {
+    position: relative;
+    height:105px;
+    width:105px;
+    border-style: solid;
+    border-radius: 10px;
+    text-align: center;
+    margin-bottom: 10px;
+    background-color: darkolivegreen;
+}
+
+.playlist_image {
+    height: 105px; 
+    width: 105px; 
+    opacity: 1;
+    transition: opacity .5s;
+    margin:0px;
+    border-radius: 8px;
+}
+
+.playlist_name {
+    position: absolute;
+    visibility: hidden;
+    font-family: monospace;
+    font-weight: bold;
+    font-size: 16px;
+    width:100%;
+    transform: translate(-50%,-50%);
+    top: 50%;
+    left: 50%;
+}
+
+.playlist_box:hover .playlist_name {
+    visibility: visible;
+}
+
+.playlist_box:hover .playlist_image {
+    opacity: 0.15;
+    transition:opacity .4s;
+}
