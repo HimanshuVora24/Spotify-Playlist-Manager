@@ -9,7 +9,8 @@
     padding-top: 5px;
     padding-bottom:5px;
     padding-left:5px;
-    display:flex
+    display:flex;
+    height: 4.5em;
 }
 
 .track_image {
@@ -22,4 +23,21 @@
 .track_info {
     display: flex; 
     flex-direction: column;
+}
+
+.track_text {
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    width: 90%;
+    display: block;
+    overflow: hidden
+}
+
+.select_track {
+    border-style: solid;
+    width: 10px;
+    height: 10px;
+    float: right;
+    margin-top: 5%;
+    margin-right: 10px;
 }

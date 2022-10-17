@@ -1,19 +1,19 @@
 import React, { useEffect , useState } from 'react';
 import './TrackView.css'
+import TrackItem from './TrackItem.js'
+
 
 function TrackView(props) {
-    const track_map = props.track_list.map((track) => 
-        <div className = 'track_box' key={track.track.id}>
-            <img className='track_image' src={track.track.album.images[0].url}></img>
-            <div style={{display:'flex', flexDirection:'column'}}>
-                <div style={{paddingBottom:'2px'}}>{"\"" + track.track.name + "\" - " + track.track.artists.map((artist) => artist.name).join(', ')}</div>
-                <div style={{fontStyle: 'italic'}}>{track.track.album.name}</div>
-            </div>
+    var track_map = props.track_list.map((track) => <TrackItem track_info = {track}/>);
+    
+    var track_map_second = track_map.splice(Math.ceil(track_map.length/2));
+
+    return(
+        <div style={{display:'flex', overflow:'hidden'}}>
+            <div style={{flex: '0 0 50%', overflow:'hidden'}}>{track_map}</div>
+            <div style={{flex: '1 0', overflow:'hidden'}}>{track_map_second}</div>
         </div>
     );
-    
-
-    return(<div >{track_map}</div>);
 }
 
 export default TrackView; 
